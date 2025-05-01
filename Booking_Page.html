@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crimson Luxe</title>
+  <!--<link rel="stylesheet" href="css/style.css">-->
+  <link rel="stylesheet" href="stylesheet1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+  <!-- Template Stylesheet -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <style>
+    @import url("css/style.css");
+  </style>
+<style>
+    /* Make navbar sticky *
+  nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 1000;
+  }*/
+
+  /* Ensure the container background is white */
+  .room-item {
+      background-color: #fafafa !important;
+  }
+
+  /* Change the title text color to white */
+  .room-item h5 {
+      color: #2c2c2c !important;
+      background-color: #f1f1f1; /* Added background to make white text visible */
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 5px;
+  }
+
+  /* Change stars to yellow */
+  .fa-star {
+      color: #d4af37 !important;
+  }
+
+  /* Change WiFi, bed, and bath icons to blue */
+  .fa-bed, .fa-bath, .fa-wifi {
+      color: #d4af37 !important;
+  }
+
+/* Make the entire price box red */
+.position-absolute {
+    background-color: #d4af37 !important;
+    color: white !important; /* Ensure text remains readable */
+    border: none !important; /* Remove border if any */
+    padding: 5px 10px;
+    border-radius: 5px; /* Optional: Round the corners */
+}
+
+
+.room-feature-text {
+  color: #1b1b1b !important; /* Make the text readable */
+}
+
+.fa-star {
+  color: #d4af37 !important; /* Gold stars */
+}
+
+/* Fix text under "Rooms & Suites" heading */
+.text-center p {
+  color: #1b1b1b !important;
+}
+
+
+
+</style>
+</head>
+<!--<script>
+  function selectRoom(roomType, element) {
+    document.getElementById("selected-room-type").value = roomType;
+
+    const rooms = document.querySelectorAll(".rooms");
+    rooms.forEach(room => {
+      room.style.border = "none";
+      room.style.backgroundColor = "";
+    });
+
+    element.style.border = "2px solid #d4af37";
+    element.style.backgroundColor = "#f9f9f9";
+  }
+</script>-->
+<body>
+
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container flex_space">
+      <div class="logo">
+        <img src="images/NLogoh.JPG" alt="Crimson Luxe Logo">
+          <li><a href="Homepage.html" class="text-center mx-auto mb-1">Return Home</a></li>
+      </div>
+    </div>
+  </header>
+  <div class="container py-3">
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 200px;">
+        <h2 class="mb-3"></h2>
+    </div>
+  </div>
+
+<section class="book">
+  <div class="container">
+    <h1><span>Book Your Rooms</span> </h1>
+    <form id="booking-form" class="form">
+      <div>
+        <label for="check-in">Check-in Date:</label>
+        <input type="date" id="check-in" name="check_in_date" required>
+      </div>
+      <div>
+        <label for="check-out">Check-out Date:</label>
+        <input type="date" id="check-out" name="check_out_date" required>
+      </div>
+      <div>
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" max="4" required>
+      </div>
+      <div>
+        <label for="room-type">Room Type:</label>
+        <select id="room-type" name="room_type">
+          <option value="Single">Single Room</option>
+          <option value="Double">Double Room</option>
+          <option value="Triple">Triple Room</option>
+          <option value="Junior">Junior Room</option>
+          <option value="Deluxe">Deluxe Room</option>
+          <option value="Premium">Premium Room</option>
+        </select>
+      </div>
+      <button type="submit">Confirm Booking</button>
+    </form>
+    <div id="booking-message" style="margin-top: 20px; font-weight: bold; color: green;"></div>
+
+    <!--<div class="room-selection">
+      <div class="rooms">
+        <h3>Single Room</h3>
+        <p>Perfect for solo travelers, includes free Wi-Fi, TV, and en-suite bathroom.</p>
+        <button class="selectbtn" type="button" onclick="selectRoom('Single')">Select</button>
+      </div>
+      <div class="rooms">
+        <h3>Double Room</h3>
+        <p>Ideal for couples, includes free Wi-Fi, TV, en-suite bathroom, and double bed.</p>
+        <button class="selectbtn" type="button" onclick="selectRoom('Double')">Select</button>
+      </div>
+      <div class="rooms">
+        <h3>Suite</h3>
+        <p>Spacious suite for luxury stays, includes living area, mini bar, and balcony.</p>
+        <button class="selectbtn" type="button" onclick="selectRoom('Suite')">Select</button>
+      </div>
+    </div>-->
+  </div>
+</section>
+<div class="container py-5">
+  <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+      <h1 class="mb-3">Rooms & Suites</h1>
+      <p>Discover our comfortable and luxurious rooms designed for your perfect stay.</p>
+  </div>
+  <div class="row g-4">
+      <!-- Room 1 -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="room-item shadow rounded overflow-hidden">
+              <div class="position-relative">
+                  <img class="img-fluid" src="Images/room-1.jpg" alt="Junior Suite">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">£100/Night</small>
+              </div>
+              <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                      <h5 class="mb-0">Single Room</h5>
+                      <div class="ps-2">
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                      </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <small class="border-end me-3 pe-3">
+                      <i class="fa fa-bed text-primary me-2"></i>
+                      <span class="room-feature-text">1 Bed</span>
+                    </small>
+                    <small class="border-end me-3 pe-3">
+                      <i class="fa fa-bath text-primary me-2"></i>
+                      <span class="room-feature-text">1 Bath</span>
+                    </small>
+                    <small>
+                      <i class="fa fa-wifi text-primary me-2"></i>
+                      <span class="room-feature-text">Wifi</span>
+                    </small>
+                  </div>
+                  
+                  <p class="text-body mb-3">Spacious room with modern amenities and a beautiful view.</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Room 2 -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="room-item shadow rounded overflow-hidden">
+              <div class="position-relative">
+                  <img class="img-fluid" src="Images/broom-2.jpg" alt="Deluxe Room">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">£140/Night</small>
+              </div>
+              <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                      <h5 class="mb-0">Double Room</h5>
+                      <div class="ps-2">
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                      </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <small class="border-end me-3 pe-3">
+                      <i class="fa fa-bed text-primary me-2"></i>
+                      <span class="room-feature-text">2 Beds</span>
+                    </small>
+                    <small class="border-end me-3 pe-3">
+                      <i class="fa fa-bath text-primary me-2"></i>
+                      <span class="room-feature-text">1 Bath</span>
+                    </small>
+                    <small>
+                      <i class="fa fa-wifi text-primary me-2"></i>
+                      <span class="room-feature-text">Wifi</span>
+                    </small>
+                  </div>
+                  <p class="text-body mb-3">Enjoy premium comfort with high-end furnishings and a city view.</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Room 3 -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="room-item shadow rounded overflow-hidden">
+              <div class="position-relative">
+                  <img class="img-fluid" src="Images/room-3.jpg" alt="Presidential Suite">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">£190/Night</small>
+              </div>
+              <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                      <h5 class="mb-0">Triple Room</h5>
+                      <div class="ps-2">
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                          <small class="fa fa-star text-primary"></small>
+                      </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <small class="border-end me-3 pe-3">
+                      <i class="fa fa-bed text-primary me-2"></i>
+                      <span class="room-feature-text">3 Beds</span>
+                    </small>
+                    <small class="border-end me-3 pe-3">
+                      <i class="fa fa-bath text-primary me-2"></i>
+                      <span class="room-feature-text">2 Baths</span>
+                    </small>
+                    <small>
+                      <i class="fa fa-wifi text-primary me-2"></i>
+                      <span class="room-feature-text">Wifi</span>
+                    </small>
+                  </div>
+                  <p class="text-body mb-3">Ultimate luxury experience with top-class services and a panoramic view.</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Room 4 -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="room-item shadow rounded overflow-hidden">
+            <div class="position-relative">
+                <img class="img-fluid" src="Images/room-4.jpg" alt="Presidential Suite">
+                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">£210/Night</small>
+            </div>
+            <div class="p-4 mt-2">
+                <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Junior Suite</h5>
+                    <div class="ps-2">
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                  <small class="border-end me-3 pe-3">
+                    <i class="fa fa-bed text-primary me-2"></i>
+                    <span class="room-feature-text">2 Beds</span>
+                  </small>
+                  <small class="border-end me-3 pe-3">
+                    <i class="fa fa-bath text-primary me-2"></i>
+                    <span class="room-feature-text">2 Baths</span>
+                  </small>
+                  <small>
+                    <i class="fa fa-wifi text-primary me-2"></i>
+                    <span class="room-feature-text">Wifi</span>
+                  </small>
+                </div>
+                <p class="text-body mb-3">Ultimate luxury experience with top-class services and a panoramic view.</p>
+            </div>
+        </div>
+      </div>
+
+      <!-- Room 5 -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="room-item shadow rounded overflow-hidden">
+            <div class="position-relative">
+                <img class="img-fluid" src="Images/room-5.jpg" alt="Presidential Suite">
+                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">£275/Night</small>
+            </div>
+            <div class="p-4 mt-2">
+                <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Deluxe Suite</h5>
+                    <div class="ps-2">
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                  <small class="border-end me-3 pe-3">
+                    <i class="fa fa-bed text-primary me-2"></i>
+                    <span class="room-feature-text">3 Beds</span>
+                  </small>
+                  <small class="border-end me-3 pe-3">
+                    <i class="fa fa-bath text-primary me-2"></i>
+                    <span class="room-feature-text">3 Baths</span>
+                  </small>
+                  <small>
+                    <i class="fa fa-wifi text-primary me-2"></i>
+                    <span class="room-feature-text">Wifi</span>
+                  </small>
+                </div>
+                <p class="text-body mb-3">Ultimate luxury experience with top-class services and a panoramic view.</p>
+            </div>
+        </div>
+      </div>
+
+      <!-- Room 6 -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="room-item shadow rounded overflow-hidden">
+            <div class="position-relative">
+                <img class="img-fluid" src="Images/room-6.jpg" alt="Presidential Suite">
+                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">£325/Night</small>
+            </div>
+            <div class="p-4 mt-2">
+                <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Premium Suite</h5>
+                    <div class="ps-2">
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                  <small class="border-end me-3 pe-3">
+                    <i class="fa fa-bed text-primary me-2"></i>
+                    <span class="room-feature-text">4 Beds</span>
+                  </small>
+                  <small class="border-end me-3 pe-3">
+                    <i class="fa fa-bath text-primary me-2"></i>
+                    <span class="room-feature-text">3 Baths</span>
+                  </small>
+                  <small>
+                    <i class="fa fa-wifi text-primary me-2"></i>
+                    <span class="room-feature-text">Wifi</span>
+                  </small>
+                </div>
+                <p class="text-body mb-3">Ultimate luxury experience with top-class services and a panoramic view.</p>
+            </div>
+        </div>
+      </div> 
+  </div>
+</div>
+
+<!-- Room End -->
+               
+          <!-- Footer -->
+          <footer>
+          <div class="container footer-container">
+            <div class="footer-col">
+              <h3>About Crimson Luxe</h3>
+              <p>Crimson Luxe is a luxury hospitality establishment dedicated to providing exceptional experiences through world-class accommodations, dining, and personalised service.</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="login.html">Book Now</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="#">Room Service</a></li>
+                <li><a href="#">Restaurant Reservations</a></li>
+                <li><a href="#">Spa Appointments</a></li>
+                <li><a href="#">Airport Transfers</a></li>
+                <li><a href="#">Concierge Services</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Contact Us</h3>
+              <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Downtown</li>
+                <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+                <li><i class="fas fa-envelope"></i> info@CrimsonLuxe.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>&copy; 2025 Crimson Luxe. All Rights Reserved.</p>
+          </div>
+          </footer>
+          
+          <!-- Back to Top -->
+          <div class="back-to-top" id="back-to-top">
+          <i class="fas fa-arrow-up"></i>
+          </div>
+          
+          <!-- JavaScript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+          <script>
+            // Initialize AOS
+            AOS.init({
+              duration: 1000,
+              once: true
+            });
+          
+            // Sticky Header
+            window.addEventListener('scroll', function() {
+              const header = document.getElementById('header');
+              if (window.scrollY > 100) {
+                header.classList.add('sticky');
+              } else {
+                header.classList.remove('sticky');
+              }
+            });
+          
+            // Mobile Menu
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('overlay');
+          
+            menuBtn.addEventListener('click', function() {
+              mobileMenu.classList.add('active');
+              overlay.classList.add('active');
+            });
+          
+            closeBtn.addEventListener('click', function() {
+              mobileMenu.classList.remove('active');
+              overlay.classList.remove('active');
+            });
+          
+            overlay.addEventListener('click', function() {
+              mobileMenu.classList.remove('active');
+              overlay.classList.remove('active');
+            });
+          
+            // Back to Top
+            const backToTop = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function() {
+              if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+              } else {
+                backToTop.classList.remove('active');
+              }
+            });
+          
+            backToTop.addEventListener('click', function() {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            });
+          
+            // Owl Carousel - Hero
+            $('.hero .owl-carousel').owlCarousel({
+              items: 1,
+              loop: true,
+              margin: 0,
+              nav: false,
+              dots: true,
+              autoplay: true,
+              autoplayTimeout: 5000,
+              autoplayHoverPause: true,
+              animateOut: 'fadeOut'
+            });
+          
+            // Owl Carousel - Testimonials
+            $('.testimonials .owl-carousel').owlCarousel({
+              loop: true,
+              margin: 20,
+              nav: false,
+              dots: true,
+              autoplay: true,
+              autoplayTimeout: 4000,
+              autoplayHoverPause: true,
+              responsive: {
+                0: {
+                  items: 1
+                },
+                768: {
+                  items: 2
+                },
+                992: {
+                  items: 3
+                }
+              }
+            });
+          </script>
+
+  <div class="legal">
+    <p class="container">Copyright (c) 2022 Copyright Holder All Rights Reserved.</p>
+  </div>
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById("booking-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+    
+      const formData = new FormData(this);
+    
+      fetch("booking.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === "success") {
+          document.getElementById("booking-message").innerHTML =
+            `✅ ${data.message}<br>
+            <a href="${data.download}" class="button" target="_blank" rel="noopener">Download Booking Summary</a>`;
+          document.getElementById("booking-form").reset();
+        } else {
+          document.getElementById("booking-message").innerHTML = `❌ ${data.message}`;
+        }
+      })
+      .catch(error => {
+        document.getElementById("booking-message").innerHTML =
+          "❌ There was an error. Please try again.";
+      });
+    });
+    </script>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crimson Luxe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet1.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container flex_space">
+      <div class="logo">
+        <img src="images/NLogoh.JPG" alt="Crimson Luxe Logo">
+      </div>
+      <div class="navlinks">
+        <ul id="menulist">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="login.html" class="primary-btn">Book Now</a></li>
+        </ul>
+        <i class="fas fa-bars" id="menu-btn"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <i class="fas fa-times mobile-close" id="close-btn"></i>
+    <!--<ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#history">History</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="login.html" class="primary-btn">Book Now</a></li>
+    </ul>-->
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="images/banner-1.png" alt="Luxury Hotel Room">
+        <div class="text">
+          <h1>Experience Luxury & Comfort</h1>
+          <p>Welcome to Crimson Luxe, where every stay is a memorable experience of luxury, comfort, and exceptional service.</p>
+          <div class="flex">
+            <a href="login.html" class="primary-btn">Book Now</a>
+            <a href="#about" class="secondary-btn">Discover More</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/Room2.JPG" alt="Hotel Suite">
+        <div class="text">
+          <h1>Your Perfect Getaway</h1>
+          <p>Relax and unwind in our beautifully designed spaces, complemented by world-class amenities and services.</p>
+          <div class="flex">
+            <a href="login.html" class="primary-btn">Book Now</a>
+            <a href="#about" class="secondary-btn">Discover More</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/banner-3.png" alt="Hotel Facilities">
+        <div class="text">
+          <h1>Creating Memories Since 1985</h1>
+          <p>For over three decades, we've been dedicated to providing exceptional hospitality experiences for our guests.</p>
+          <div class="flex">
+            <a href="login.html" class="primary-btn">Book Now</a>
+            <a href="#about" class="secondary-btn">Discover More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome" id="about" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h1>Welcome to</h1>
+        <h2>Crimson Luxe</h2>
+        <p>Experience the perfect blend of luxury, comfort, and warm hospitality</p>
+      </div>
+      <div class="content">
+        <div class="text" data-aos="fade-right" data-aos-delay="200">
+          <h3>Your Luxury Retreat</h3>
+          <h2>A Tradition of Excellence</h2>
+          <p>Established in 1985, Crimson Luxe stands as a beacon of sophisticated hospitality in the heart of the city. Our commitment to excellence is reflected in every aspect of our service, from our elegantly designed rooms and suites to our world-class dining experiences.</p>
+          <p>Whether you're traveling for business or pleasure, our dedicated staff is here to ensure your stay exceeds all expectations. We pride ourselves on attention to detail and personalized service that keeps our guests returning year after year.</p>
+          <a href="login.html" class="primary-btn">Book Your Stay</a>
+        </div>
+          <div class="image" data-aos="fade-left" data-aos-delay="400">
+            <img src="images/gallery-5.jpg" alt="Luxury Hotel Interior">
+          </div>
+          </div>
+          </div>
+        </section>
+        
+        <!-- Amenities Section -->
+        <section class="amenities" id="amenities" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title">
+            <h1>We Offer</h1>
+            <h2>Premium Amenities</h2>
+            <p>Indulge in our exceptional range of services and facilities designed for your comfort and enjoyment</p>
+          </div>
+          <div class="amenities-container">
+            <div class="amenity-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-swimming-pool"></i>
+              <h3>Swimming Pool</h3>
+              <p>Relax and rejuvenate in our temperature-controlled swimming pool with panoramic views of the city skyline.</p>
+            </div>
+            <div class="amenity-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="fas fa-utensils"></i>
+              <h3>Fine Dining</h3>
+              <p>Experience culinary excellence at our award-winning restaurants offering local and international cuisine.</p>
+            </div>
+            <div class="amenity-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="fas fa-spa"></i>
+              <h3>Luxury Spa</h3>
+              <p>Pamper yourself with our range of therapeutic treatments and massage services at our tranquil spa.</p>
+            </div>
+            <div class="amenity-box" data-aos="fade-up" data-aos-delay="400">
+              <i class="fas fa-dumbbell"></i>
+              <h3>Fitness Center</h3>
+              <p>Maintain your fitness routine in our state-of-the-art gym equipped with the latest exercise equipment.</p>
+            </div>
+            <div class="amenity-box" data-aos="fade-up" data-aos-delay="500">
+              <i class="fas fa-wifi"></i>
+              <h3>Free Wi-Fi</h3>
+              <p>Stay connected with complimentary high-speed internet access throughout the hotel premises.</p>
+            </div>
+            <div class="amenity-box" data-aos="fade-up" data-aos-delay="600">
+              <i class="fas fa-tv"></i>
+              <h3>Modern Technology</h3>
+              <p>At Crimson Luxe, we offer a wide variety of the latest technology to keep you entertained while you enjoy your stay.</p>
+            </div>
+            <div class="amenity-box" data-aos="fade-up" data-aos-delay="700">
+              <i class="fas fa-user-friends"></i>
+              <h3>Friendly Staff</h3>
+              <p>Our Staff at the Crimson Luxe are very warm, welcoming and happy to assist you on any matters, ensuring you a great experience.</p>
+            </div>
+            <div class="amenity-box" data-aos="fade-up" data-aos-delay="800">
+              <i class="fas fa-wheelchair"></i>
+              <h3>Accessible</h3>
+              <p>We offer a very environmentally friendly accessible stay for all people.</p>
+            </div>
+          </div>
+        </div>
+        </section>
+        
+        <!-- History Section -->
+        <section class="history" id="history" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title">
+            <h1>Our Journey</h1>
+            <h2>Through Time</h2>
+            <p>Discover the rich heritage and milestones that have shaped Crimson Luxe into what it is today</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item" data-aos="fade-right">
+              <div class="timeline-year">1985</div>
+              <div class="timeline-content">
+                <h3>The Beginning</h3>
+                <p>Crimson Luxe was established with a vision to create a luxury hospitality experience unlike any other in the region.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+              <div class="timeline-year">1995</div>
+              <div class="timeline-content">
+                <h3>First Expansion</h3>
+                <p>The hotel underwent its first major expansion, adding 50 luxury suites and a world-class conference center.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right">
+              <div class="timeline-year">2005</div>
+              <div class="timeline-content">
+                <h3>Award Recognition</h3>
+                <p>Crimson Luxe received its first five-star rating and was recognized with the prestigious Global Hospitality Excellence Award.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+              <div class="timeline-year">2015</div>
+              <div class="timeline-content">
+                <h3>Modern Renovation</h3>
+                <p>A complete renovation brought state-of-the-art technology and contemporary design while preserving our classic charm.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right">
+              <div class="timeline-year">2023</div>
+              <div class="timeline-content">
+                <h3>Sustainable Future</h3>
+                <p>Crimson Luxe embraced eco-friendly practices and received certification for our sustainability initiatives and green operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title">
+            <h1>Our</h1>
+            <h2>Photo Gallery</h2>
+            <p>Take a visual tour of our beautiful hotel and the experiences that await you</p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item gallery-item-1" data-aos="zoom-in" data-aos-delay="100">
+              <img src="images/gallery-2.jpg" alt="Hotel Exterior">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+              <img src="images/gallery-1.jpg" alt="Luxury Suite">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+              <img src="images/gallery-3.jpg" alt="Restaurant">
+            </div>
+            <div class="gallery-item gallery-item-4" data-aos="zoom-in" data-aos-delay="400">
+              <img src="images/gallery-4.jpg" alt="Swimming Pool">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+              <img src="images/gallery-5.jpg" alt="Spa">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+              <img src="images/gallery-6.jpg" alt="Spa">
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="700">
+              <img src="images/gallery-7.jpg" alt="Room">
+            </div>
+          </div>
+        </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title">
+            <h1>Guest</h1>
+            <h2>Testimonials</h2>
+            <p>Read what our valued guests have to say about their experience at Crimson Luxe</p>
+          </div>
+          <div class="owl-carousel owl-theme">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-quote-left"></i>
+              <p>"My stay at Crimson Luxe was nothing short of exceptional. The staff went above and beyond to ensure my comfort, and the amenities were truly world-class. I can't wait to return!"</p>
+              <div class="user">
+                <div class="user-info">
+                  <h3>Sarah Johnson</h3>
+                  <span>Business Traveler</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+              <i class="fas fa-quote-left"></i>
+              <p>"We celebrated our anniversary at Crimson Luxe and it was a memorable experience. The romantic dinner arrangement and special touches made us feel truly valued as guests."</p>
+              <div class="user">
+                <div class="user-info">
+                  <h3>Michael & Lisa Davies</h3>
+                  <span>Couple</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+              <i class="fas fa-quote-left"></i>
+              <p>"As a frequent traveler, I've stayed at many luxury hotels around the world, but Crimson Luxe stands out for its exceptional service, attention to detail, and warm hospitality."</p>
+              <div class="user">
+                <div class="user-info">
+                  <h3>Robert Chen</h3>
+                  <span>Global Entrepreneur</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact" id="contact" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title">
+            <h1>Get in</h1>
+            <h2>Touch With Us</h2>
+            <p>We're here to answer any questions you may have about our hotel and services</p>
+          </div>
+          <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right">
+              <h3>Contact Information</h3>
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Address</h4>
+                  <p>123 Luxury Avenue, Downtown, City 10001</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@CrimsonLuxe.com</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Hours</h4>
+                  <p>24/7 - Reception & Room Service</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-map" data-aos="fade-left">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968459391!3d40.757667679326506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzI3LjYiTiA3M8KwNTknMTMuOSJX!5e0!3m2!1sen!2sus!4v1620593235845!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+        </section>
+        
+        <!-- Newsletter -->
+        <section class="newsletter">
+        <div class="container newsletter-container">
+          <h2>Subscribe to Our Newsletter</h2>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+        <div class="container footer-container">
+          <div class="footer-col">
+            <h3>About Crimson Luxe</h3>
+            <p>Crimson Luxe is a luxury hospitality establishment dedicated to providing exceptional experiences through world-class accommodations, dining, and personalised service.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#amenities">Amenities</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="login.html">Book Now</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Room Service</a></li>
+              <li><a href="#">Restaurant Reservations</a></li>
+              <li><a href="#">Spa Appointments</a></li>
+              <li><a href="#">Airport Transfers</a></li>
+              <li><a href="#">Concierge Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Downtown</li>
+              <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> info@CrimsonLuxe.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Crimson Luxe. All Rights Reserved.</p>
+        </div>
+        </footer>
+        
+        <!-- Back to Top -->
+        <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+        </div>
+        
+        <!-- JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+          // Initialize AOS
+          AOS.init({
+            duration: 1000,
+            once: true
+          });
+        
+          // Sticky Header
+          window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+              header.classList.add('sticky');
+            } else {
+              header.classList.remove('sticky');
+            }
+          });
+        
+          // Mobile Menu
+          const menuBtn = document.getElementById('menu-btn');
+          const closeBtn = document.getElementById('close-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const overlay = document.getElementById('overlay');
+        
+          menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+          });
+        
+          closeBtn.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+          });
+        
+          overlay.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+          });
+        
+          // Back to Top
+          const backToTop = document.getElementById('back-to-top');
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+              backToTop.classList.add('active');
+            } else {
+              backToTop.classList.remove('active');
+            }
+          });
+        
+          backToTop.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        
+          // Owl Carousel - Hero
+          $('.hero .owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 0,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            animateOut: 'fadeOut'
+          });
+        
+          // Owl Carousel - Testimonials
+          $('.testimonials .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            responsive: {
+              0: {
+                items: 1
+              },
+              768: {
+                items: 2
+              },
+              992: {
+                items: 3
+              }
+            }
+          });
+        </script>
+  </body>
+</html>

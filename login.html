@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/log2.css" />
+    <title>Login & Registration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms">
+        <!-- Login Form -->
+        <div class="form login">
+          <span class="title">Login</span>
+
+          <form method="POST" action="login_register.php">
+            <div class="input-field">
+              <input type="text" name="username" placeholder="Enter your username" required />
+            </div>
+            <div class="input-field">
+              <input type="password" name="password" placeholder="Enter your password" required />
+            </div>
+
+            <!-- Show error message if login fails -->
+            <?php if (!empty($error)): ?>
+              <div class="error-message" style="color: red;">
+                <?php echo $error; ?>
+              </div>
+            <?php endif; ?>
+
+            <div class="input-field button">
+              <input type="submit" name="action" value="login" />
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text">
+              Not a member?
+              <a href="#" class="text signup-link">Signup Now</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form signup">
+          <span class="title">Registration</span>
+
+          <form method="POST" action="login_register.php">
+            <div class="input-field">
+              <input type="text" name="username" placeholder="Enter your username" required />
+            </div>
+            <div class="input-field">
+              <input type="email" name="email" placeholder="Enter your email" required />
+            </div>
+            <div class="input-field">
+              <input type="password" name="password" placeholder="Create a password" required />
+            </div>
+            <!--<div class="input-field">
+              <input type="password" name="password_confirmation" placeholder="Confirm password" required />
+            </div>-->
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="termCon" />
+                <label for="termCon" class="text">I accept all terms and conditions</label>
+              </div>
+            </div>
+
+            <div class="input-field button">
+              <input type="submit" name="action" value="register" />
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text">
+              Already a member?
+              <a href="#" class="text login-link">Login Now</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
