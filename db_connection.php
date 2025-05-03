@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root"; // default username for Laragon
-$password = ""; // default password is empty for Laragon
-$dbname = "hotel_booking"; // database name you created in phpMyAdmin
+$username = "root";
+$password = ""; 
+$dbname = "hotel_booking"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
