@@ -1,8 +1,8 @@
 <?php
-$host = "localhost"; // or 127.0.0.1
+$host = "localhost"; 
 $user = "root";
-$password = ""; // your MySQL password
-$database = "hotel_booking"; // update this if different
+$password = ""; 
+$database = "hotel_booking"; 
 
 $conn = new mysqli($host, $user, $password, $database);
 if ($conn->connect_error) {
