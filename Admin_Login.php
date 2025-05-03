@@ -3,7 +3,7 @@ session_start();
 
 // Hardcoded admin credentials
 $hardcodedUsername = "admin";
-$hardcodedPassword = "supersecure123"; // <- change to whatever you want
+$hardcodedPassword = "supersecure123"; 
 
 // Handle form submission
 $loginError = false;
